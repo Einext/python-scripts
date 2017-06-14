@@ -15,7 +15,9 @@ def parseParagraph(p):
     # started = p["dateStarted"]
     # finished = p["dateFinished"]
     # pid = p["id"]
-    text = p["text"] + "\n"
+    text = ""
+    if "text" in p:
+      text = p["text"] + "\n"
     return text
 
 def writeToFile(codes, output_path):
